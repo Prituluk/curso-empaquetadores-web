@@ -4,7 +4,9 @@
   "description": "Webpack es un empaquetador de módulos que nacio en 2012, por un desarrollador aleman Tobias Koppers, y es la herramienta más utilizada actualmente dentro de los empaquetadores que existen en JS. . bundle → Si tenemos muchos elementos o módulos con dependencias que tendremos separados por archivos (arquitectura amigable para poder encontrar los elementos), pero al final cuando queramos enviar nuestro producto a producción usamos webpack para poder empaquetar los diferentes archivos. . node_modules → Carpeta donde se instalan las dependencias que agregamos. . package-lock.json → Historial y el árbol de cada una de las dependencias que se han instalado. . package.json → Archivo principal donde tenemos información del proyecto.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build" : "webpack --mode production",
+    "start": "webpack-dev-server --open --mode development",
+    "deploy" : "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +17,7 @@
     "copy": "^0.0.1",
     "html-webpack-plugin": "^5.6.0",
     "webpack": "^5.91.0",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
   }
 }
